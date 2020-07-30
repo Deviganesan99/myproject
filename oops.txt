@@ -1,0 +1,122 @@
+1.polymorphism:
+
+
+public class employee {
+    public int employee(int x,int y)
+    {
+        return x+y;
+    }
+    public int employee(int x,int y,int z)
+    {
+        return x+y+z;
+    }
+    public double employee(double x,double y)
+    {
+        return x+y;
+    }
+    public static void main(String[] args) {
+   employee s= new employee();
+   System.out.println(s.employee(4,5));
+   System.out.println(s.employee(5,6,7));
+   System.out.println(s.employee(4.5,6.5));
+    }
+}
+
+2.Inheritance:
+ class one {
+    public void printone() {
+        System.out.println("Devi");
+    }
+
+}
+
+ class two extends one{
+    public void printtwo() {
+        System.out.println("Ganesan");
+    }
+
+}
+
+    public class employee {
+        public static void main(String[] args) {
+           two s = new two();
+          s.printone();
+          s.printtwo();
+          s.printone();
+        }
+
+}
+
+3.Encapsulation:
+
+public class employee{
+    private int employeeid;
+    private String employeename;
+    private int employeesalary;
+    public int getid()
+    {
+        return employeeid;
+    }
+    public String getname()
+    {
+        return employeename;
+    }
+    public int getsalary()
+    {
+        return employeesalary;
+    }
+    public void setid(int newid)
+    {
+        employeeid=newid;
+    }
+    public void setname(String newname)
+    {
+        employeename=newname;
+    }
+    public void setsalary(int newsalary)
+    {
+        employeesalary=newsalary;
+    }
+    public static void main(String[] args)
+    {
+        employee s=new employee();
+        s.setname("Devi");
+        s.setid(25);
+        s.setsalary(1000);
+        System.out.println("employee name is:" + s.getname());
+        System.out.println("employee id is:" + s.getid());
+        System.out.println("employee salary is:" + s.getsalary());
+
+    }
+}
+4.Abstraction:
+abstract class employee1
+{
+    abstract void  draw();
+}
+class one extends employee1
+{
+    void draw()
+    {
+        System.out.println("hiii");
+    }
+}
+class two extends employee1
+{
+    void draw()
+    {
+        System.out.println("hello");
+    }
+}
+public class employee{
+
+    public static void main(String[] args)
+    {
+        employee1 s=new one();
+          s.draw();
+          employee1 s2= new two();
+          s2.draw();
+
+
+    }
+}
