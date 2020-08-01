@@ -1,4 +1,5 @@
-create database myproject;
+create database Project;
+
 /*patient table*/
 create table patient(
 patient_id int NOT NULL,
@@ -14,6 +15,7 @@ insert into  patient values(2,'pavithra','thirchy','pavithra@gmail.com',88975221
 insert into  patient values(3,'abi','chennai','abi@gmail.com',6889123456,'abi');
 insert into  patient values(4,'devi','chennai','d@gmail.com',8987654321,'d');
 insert into  patient values(5,'vijai','madurai','vijai@gmail.com',9612345678,'vijai');
+delete from patient where patient_id=1;
 /*printing patient table*/
 select*from patient;
 
@@ -32,7 +34,7 @@ insert into  volunteer values(2,'pavithra','thirchy','pavithra@gmail.com',889752
 insert into  volunteer values(3,'surya','chennai','surya@gmail.com',6889123456,'surya');
 insert into  volunteer values(4,'devi','chennai','d@gmail.com',8987654321,'d');
 insert into  volunteer values(5,'vijai','madurai','vijai@gmail.com',9612345678,'vijai');
-
+delete from volunteer where volunteer_id=5;
 /*printing  volunteer table data*/
 select*from volunteer;
 
@@ -50,6 +52,7 @@ insert into  store values(2,'pavithrag','thirchy',88943756);
 insert into  store values(3,'abinayashri','chennai',68834569);
 insert into  store values(4,'selvi','chennai',895635346);
 insert into  store values(5,'vijaiyalekshmi','madurai',966454771);
+insert into  store values(6,'vijaiyalekshmi','madurai',966454771);
 
 /*printing store table*/
 select*from store;
@@ -59,24 +62,19 @@ create table item(
 item_id int NOT NULL,
 itemname varchar(20) NOT NULL,
 numberofitem int ,
+item_price int NOT NULL,
 primary key(item_id),
+store_id int foreign key references store(store_id),
 );
-insert into  item values(1,'shop',3);
-insert into  item values(2,'sanitizer',5);
-insert into  item values(3,'mask',6);
-insert into  item values(4,'horlicks',1);
+insert into  item values(1,'shop',3,54);
+insert into  item values(2,'sanitizer',5,500);
+insert into  item values(3,'mask',6,67);
+insert into  item values(4,'horlicks',1,56);
 
 /*printing item table*/
-
 select*from item;
 
-/*third table*/
-create table volunteerlookup(
-store1_id int foreign key references store(store_id),
-volunteer_id int foreign key references volunteer(volunteer_id),
-);
-/* printing voluklookup table */
-select*from volunteerlookup;
+
 
 /*creating ordertable*/
 create table ordertable(
@@ -84,7 +82,7 @@ order_id int NOT NULL,
 numberoforder int ,
 primary key(order_id),
 volunteer_id  int foreign key references volunteer(volunteer_id),
-customer_id int foreign key references patient(patient_id),
+patient_id int foreign key references patient(patient_id),
 item_id int foreign key references item(item_id),
 
 );
@@ -92,5 +90,31 @@ insert into  ordertable values(1,3,1,1,1);
 insert into  ordertable values(2,5,2,2,2);
 insert into  ordertable values(3,6,3,3,3);
 insert into  ordertable values(4,1,4,4,4);
+delete from ordertable where order_id=5;
 /*printing ordertable*/
 select*from ordertable;
+
+create table volunteerlookuptb(
+volunteerlookup_id int,
+store_id int foreign key references store(store_id),
+volunteer_id int foreign key references volunteer(volunteer_id),
+primary key(volunteerlookup_id)
+);
+/* printing voluklookup table */
+select*from volunteerlookuptb;
+select O.order_id as orderId, O.numberoforder as numberOfOrder, O.volunteer_id as volunteerId, O.item_id as itemId, C.patient_name as patientName, C.patient_address as patientAddress
+from ordertable O
+INNER JOIN patient c
+ON  O.patient_id = C.patient_id
+where O.patient_id = 1;
+
+select O.order_id as orderId, O.numberoforder as numberOfOrder, O.patient_id as patientId, O.item_id as itemId, C.volunteer_name as volunteerName, C.volunteer_address as volunteerAddress
+from ordertable O
+INNER JOIN volunteer c
+ON  O.volunteer_id = C.volunteer_id
+where O.volunteer_id = 1;
+select O.item_id as itemId, O.numberofitem as numberOfItem, O.item_price as itemPrice,  C.storeaddress as StoreAddress, C.storename as Storename
+from item O
+INNER JOIN store c
+ON  O.store_id = C.store_id
+where O.store_id = 1;
