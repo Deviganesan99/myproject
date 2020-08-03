@@ -14,19 +14,19 @@ import org.springframework.stereotype.Repository;
 import net.guides.springboot2.crud.model.Volunteer;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 @Repository
 
 public interface VolunteerRepository extends JpaRepository<Volunteer, Long>{
-    @Query(value="select O.order_id as orderId, O.numberoforder as numberOfOrder, O.customer_id as patientId, O.item_id as itemId, C.volunteer_name as volunteerName, C.volunteer_address as volunteerAddress\n" +
+    @Query(value="select O.order_id as orderId, O.numberoforder as numberOfOrder, O.patient_id as patientId, O.item_id as itemId, C.volunteer_name as volunteerName, C.volunteer_address as volunteerAddress\n" +
             "from ordertable O\n" +
             "INNER JOIN volunteer c\n" +
             "ON  O.volunteer_id = C.volunteer_id\n" +
             "where O.volunteer_id =:volunteer_id", nativeQuery = true)
-    ArrayList<VolunteerOrderView> findOrder(@Param("volunteer_id") long volunteerId);
+    ArrayList<VolunteerOrderView> findVolunteerOrder(@Param("volunteer_id") long volunteerId);
 
 
-    List<VolunteerOrderView> findAllOrder(Long volunteerId);
+
 }

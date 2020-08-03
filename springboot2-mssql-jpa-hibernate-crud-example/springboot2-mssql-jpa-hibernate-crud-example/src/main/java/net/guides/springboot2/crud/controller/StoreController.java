@@ -6,7 +6,7 @@ import java.util.Map;
 
 //import javax.validation.Valid;
 
-import net.guides.springboot2.crud.model.PatientOrderView;
+
 import net.guides.springboot2.crud.model.StoreItemView;
 import net.guides.springboot2.crud.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +30,13 @@ public class StoreController {
     private StoreRepository storeRepository;
 
     @GetMapping("/store")
-    public List<Store> getAllStore() {
+    public List<Store> getAllStoreItem() {
         return storeRepository.findAll();
     }
-    //@GetMapping("/StoreOrder/{StoreId}")
-    //public List<StoreItemView>getAllItem(@PathVariable(value="storeId")Long storeId) {
-      //  return storeRepository.findStoreItem(storeId);    }
-
+    @GetMapping("/storeOrder/{storeId}")
+    public List<StoreItemView>getAllStoreItem(@PathVariable(value="storeId")Long storeId) {
+        return storeRepository.findStoreItem(storeId);
+    }
 
     @GetMapping("/store/{store_id}")
     public ResponseEntity<Store> getStoreById(@PathVariable(value = "store_id") Long storeId)

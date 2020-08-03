@@ -6,8 +6,8 @@ import java.util.Map;
 
 //import javax.validation.Valid;
 
-import net.guides.springboot2.crud.model.PatientOrderView;
-import net.guides.springboot2.crud.model.VolunteerOrderView;
+
+
 import net.guides.springboot2.crud.model.VolunteerOrderView;
 import net.guides.springboot2.crud.repository.VolunteerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +35,9 @@ public class VolunteerController {
         return volunteerRepository.findAll();
     }
 
-    @GetMapping("/Order/{volunteerId}")
+    @GetMapping("/volunteerOrder/{volunteerId}")
     public List<VolunteerOrderView>getAllVolunteerOrder(@PathVariable(value="volunteerId")Long volunteerId) {
-        return volunteerRepository.findAllOrder(volunteerId);
+        return volunteerRepository.findVolunteerOrder(volunteerId);
 
     }
     @GetMapping("/volunteer/{volunteer_id}")

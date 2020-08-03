@@ -25,6 +25,6 @@ public interface StoreRepository extends JpaRepository<Store, Long>{
             "INNER JOIN store c\n" +
             "ON  O.store_id = C.store_id\n" +
             "where O.store_id =:store_id", nativeQuery = true)
-    ArrayList<StoreItemView>findPatientOrder(@Param("store_id") long storeId);
+    ArrayList<StoreItemView>findStoreItem(@Param("store_id") long storeId);
 
 }

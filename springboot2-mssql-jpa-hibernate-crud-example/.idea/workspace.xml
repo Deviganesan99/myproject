@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="203d3154-4878-4847-a92c-b9bc8e5c88bc" name="Default Changelist" comment="" />
+    <list default="true" id="203d3154-4878-4847-a92c-b9bc8e5c88bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../erdiagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/controller/StoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/StoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/VolunteerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/VolunteerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/Controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/exception/ErrorDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/java/net/guides/springboot2/crud/repository/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/test/java/net/guides/springboot2/springboot2jpacurdexample/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/src/test/java/net/guides/springboot2/springboot2jpacurdexample/EmployeeControllerIntegrationTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1fIRdM0eSN9zQHzDJm9MQyxCZts" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,9 +62,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595904019504" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1595982259327">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1596446597931">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595982259327" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596446597931" />
   </component>
 </project>
