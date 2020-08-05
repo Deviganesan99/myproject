@@ -13,16 +13,24 @@ public class Order {
     private long id;
     @Column(name = "numberoforder", nullable = false)
     private long numberOfOrder;
-
+    @Column(name="patient_id",nullable = false)
+    private int patientId;
+    @Column(name="volunteer_id",nullable = false)
+    private int volunteerId;
+    @Column(name="item_id",nullable = false)
+    private int itemId;
 
 
     public Order() {
 
     }
 
-    public Order(long id,long numberOfOrder) {
+    public Order(long id,long numberOfOrder,int patientId,int volunteerId,int itemId) {
         this.id = id;
         this.numberOfOrder = numberOfOrder;
+        this.patientId=patientId;
+        this.volunteerId=volunteerId;
+        this.itemId=itemId;
     }
 
 
@@ -41,11 +49,30 @@ public class Order {
         this.numberOfOrder = numberOfOrder;
     }
 
+    public int getPatientId() {
+        return patientId;
+    }
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
 
+    public int getVolunteerId() {
+        return volunteerId;
+    }
+    public void setVolunteerId(int volunteerId) {
+        this.volunteerId = volunteerId;
+    }
+
+    public int getItemId() {
+        return itemId;
+    }
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
 
     @Override
     public String toString() {
-        return "Patient [id=" + id + ", numberOfOrder=" + numberOfOrder + " ]";
+        return "Order [id=" + id + ", numberOfOrder=" + numberOfOrder + " ,patient="+patientId+",volunteerId="+volunteerId+",itemId="+itemId+"]";
     }
 
 }

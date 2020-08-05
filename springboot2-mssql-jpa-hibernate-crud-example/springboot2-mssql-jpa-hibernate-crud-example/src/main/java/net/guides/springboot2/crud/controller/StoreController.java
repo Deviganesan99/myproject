@@ -58,11 +58,9 @@ public class StoreController {
                 .orElseThrow(() -> new ResourceNotFoundException("store not found for this id :: " + storeId));
 
 
-        store.setPhone(storeDetails.getPhone());
-        store.setAddress(storeDetails.getAddress());
-        store.setFirstName(storeDetails.getFirstName());
-        final Store updatedStore = storeRepository.save(store);
-        return ResponseEntity.ok(updatedStore);
+        storeDetails.setId(store.getId());
+
+        return ResponseEntity.ok(storeRepository.save(storeDetails));
     }
 
     @DeleteMapping("/store/{store_id}")

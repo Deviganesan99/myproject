@@ -52,11 +52,9 @@ public class ItemController {
                 .orElseThrow(() -> new ResourceNotFoundException("item not found for this id :: " + itemId));
 
 
-        item.setNumberOfItem(itemDetails.getNumberOfItem());
-        item.setItemPrice(itemDetails.getItemPrice());
-        item.setFirstName(itemDetails.getFirstName());
-        final Item updatedItem = itemRepository.save(item);
-        return ResponseEntity.ok(updatedItem);
+        itemDetails.setId(item.getId());
+
+        return ResponseEntity.ok(itemRepository.save(itemDetails));
     }
 
     @DeleteMapping("/item/{item_id}")

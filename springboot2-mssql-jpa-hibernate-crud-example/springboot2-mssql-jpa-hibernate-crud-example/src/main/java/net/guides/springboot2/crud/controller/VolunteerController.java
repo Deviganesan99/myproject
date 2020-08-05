@@ -59,13 +59,9 @@ public class VolunteerController {
         Volunteer volunteer = volunteerRepository.findById(volunteerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + volunteerId));
 
-        volunteer.setPassword(volunteerDetails.getPassword());
-        volunteer.setPhone(volunteerDetails.getPhone());
-        volunteer.setEmailId(volunteerDetails.getEmailId());
-        volunteer.setAddress(volunteerDetails.getAddress());
-        volunteer.setFirstName(volunteerDetails.getFirstName());
-        final Volunteer updatedVolunteer = volunteerRepository.save(volunteer);
-        return ResponseEntity.ok(updatedVolunteer);
+        volunteerDetails.setId(volunteer.getId());
+
+        return ResponseEntity.ok(volunteerRepository.save(volunteerDetails));
     }
 
 

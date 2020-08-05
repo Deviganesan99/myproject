@@ -52,9 +52,9 @@ public class OrderController {
                 .orElseThrow(() -> new ResourceNotFoundException("order not found for this id :: " + orderId));
 
 
-        order.setNumberOfOrder(orderDetails.getNumberOfOrder());
-        final Order updatedOrder = orderRepository.save(order);
-        return ResponseEntity.ok(updatedOrder);
+        orderDetails.setId(order.getId());
+
+        return ResponseEntity.ok(orderRepository.save(orderDetails));
     }
 
     @DeleteMapping("/ordertable/{item_id}")

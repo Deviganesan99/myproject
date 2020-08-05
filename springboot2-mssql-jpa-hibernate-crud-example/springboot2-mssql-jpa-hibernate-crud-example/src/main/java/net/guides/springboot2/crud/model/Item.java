@@ -16,14 +16,18 @@ public class Item {
     private int numberOfItem;
     @Column(name = "item_price", nullable = false)
     private long itemPrice;
+    @Column(name = "store_id", nullable = false)
+    private int storeId;
+
     public Item() {
 
     }
 
-    public Item(String firstName, int numberOfItem,long itemPrice) {
+    public Item(String firstName, int numberOfItem,long itemPrice,int storeId) {
         this.firstName = firstName;
         this.numberOfItem = numberOfItem;
         this.itemPrice= itemPrice;
+        this.storeId =storeId;
     }
 
 
@@ -57,9 +61,16 @@ public class Item {
         this.itemPrice = itemPrice;
     }
 
+    public int getStoreId() {
+        return storeId;
+    }
+    public void setStoreId(int storeId) {
+        this.storeId = storeId;
+    }
+
     @Override
     public String toString() {
-        return "Patient [id=" + id + ", firstName=" + firstName +",numberOfItem=" + numberOfItem +",itemPrice ="+itemPrice+"]";
+        return "Item [id=" + id + ", firstName=" + firstName +",numberOfItem=" + numberOfItem +",itemPrice ="+itemPrice+",storeId="+storeId + "]";
     }
 
 }

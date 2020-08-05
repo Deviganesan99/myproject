@@ -18,7 +18,6 @@ public class Store {
     private long phone;
 
 
-
     public Store() {
 
     }
@@ -27,6 +26,7 @@ public class Store {
         this.firstName = firstName;
         this.address = address;
         this.phone =phone;
+
     }
 
 
@@ -61,9 +61,11 @@ public class Store {
         this.phone = phone;
     }
 
+
+
     @Override
     public String toString() {
-        return "Patient [id=" + id + ", firstName=" + firstName + ", address=" + address +
+        return "Store [id=" + id + ", firstName=" + firstName + ", address=" + address +
                 ", phone=" + phone + " ]";
     }
 

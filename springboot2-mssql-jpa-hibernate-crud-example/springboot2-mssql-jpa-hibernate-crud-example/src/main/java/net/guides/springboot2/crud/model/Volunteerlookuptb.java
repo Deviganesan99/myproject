@@ -11,13 +11,18 @@ public class Volunteerlookuptb {
 
     @Column(name="volunteerookuptb_id",nullable = false)
     private long id;
-
+    @Column(name="volunteer_id",nullable = false)
+    private int volunteerId;
+    @Column(name="store_id",nullable = false)
+    private int storeId;
     public Volunteerlookuptb() {
 
     }
 
-    public Volunteerlookuptb(long id) {
+    public Volunteerlookuptb(long id,int volunteerId,int storeId) {
         this.id = id;
+        this.volunteerId=volunteerId;
+        this.storeId=storeId;
 
     }
 
@@ -29,10 +34,21 @@ public class Volunteerlookuptb {
         this.id = id;
     }
 
-
+    public int getVolunteerId() {
+        return volunteerId;
+    }
+    public void setVolunteerId(int volunteerId) {
+        this.volunteerId = volunteerId;
+    }
+    public int getstoreId() {
+        return storeId;
+    }
+    public void setStoreId(int storeId) {
+        this.storeId = storeId;
+    }
     @Override
     public String toString() {
-        return "Patient [id=" + id + " ]";
+        return "Patient [id=" + id + ",volunteerId="+volunteerId+",storeId="+storeId+" ]";
     }
 
 }
