@@ -4,9 +4,6 @@
     <list default="true" id="203d3154-4878-4847-a92c-b9bc8e5c88bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../erdiagram.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/controller/StoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/StoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/VolunteerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot2-mssql-jpa-hibernate-crud-example/src/main/java/net/guides/springboot2/crud/repository/VolunteerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot2-mssql-jpa-hibernate-curd-example/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -62,9 +59,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595904019504" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1596446597931">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1597066045576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596446597931" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597066045576" />
   </component>
 </project>
